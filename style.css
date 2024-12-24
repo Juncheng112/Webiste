@@ -1,0 +1,165 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4A90E2, #464646);
+    color: #222;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(90deg, #021142, #07b69f);
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px 10%;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    justify-content: start; /* Aligns content to the left */
+    gap: 20px; /* Adds space between the image and text */
+}
+
+header img {
+    max-width: 25%; /* Logo size remains proportional */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures proper rendering */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 5rem; /* Responsive text size */
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+    header img {
+        max-width: 25%; /* Adjust logo size for smaller screens */
+        margin: 0
+    }
+
+    header h1 {
+        font-size: 1rem; /* Adjust text size for smaller screens */
+    }
+}
+
+
+/* Main Section Styling */
+main {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    margin: 40px auto;
+    width: 85%;
+    max-width: 1200px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+main:hover {
+    transform: scale(1.01);
+}
+
+main h2 {
+    color: #05668D;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #07b69f;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Updated h3 Styling */
+main h3 {
+    color: #2F4858;
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-left: 5px solid #05668D;
+    padding-left: 15px;
+}
+
+/* Updated h4 Styling */
+main h4 {
+    color: #07b69f;
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Ordered List Styling */
+main ol {
+    font-size: 1.1em;
+    color: #2F4858;
+    line-height: 1.8;
+    margin-left: 25px;
+    padding-left: 10px;
+}
+
+main ol li {
+    margin-bottom: 12px;
+    list-style-type: decimal;
+}
+
+/* Nested Ordered List Styling */
+main ol ol {
+    margin-left: 40px;
+    list-style-type: lower-alpha;
+}
+
+main ol ol li {
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background: #021142;
+    color: #ebebeb;
+    text-align: center;
+    padding: 20px 10%;
+    font-size: 1em;
+    letter-spacing: 1px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling (Optional for UX) */
+button {
+    background-color: #07b69f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #05668D;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

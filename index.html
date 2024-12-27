@@ -10,24 +10,16 @@
 <body>
     <!-- Header Section -->
     <header>
-        <img src="https://www.tp.edu.sg/content/dam/tp-web/images/common/tplogo-course-search.png" alt="Temasek Polytechnic Logo" /> 
         <div>
             <h1>Saline Solution Production Machine</h1>
         </div>
     </header>
-    
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h3>Page Selection</h3>
-        <ul>
-            <li><a href="#introduction-container">Introduction</a></li>
-            <li><a href="#purpose-container">Purpose</a></li>
-            <li><a href="#history-container">History</a></li>
-            <li><a href="#content-container">Key Components</a></li>
-            <li><a href="#guide-container">Operation Guide</a></li>
-        </ul>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for sections or content...">
     </div>
-    
+
     <!-- Main Content Section -->
     <main class="container">
         <!-- Introduction Section -->
@@ -41,6 +33,8 @@
                     Equipped with advanced data analysis tools, it enables continuous performance monitoring and environmental impact assessment,
                     ensuring maximum operational efficiency.
                 </p>
+                <!-- Adding the image here -->
+                <img src="Saline_image.jpg" alt="Saline Machine"  width="300">
             </section>
         </div>
 
@@ -89,13 +83,12 @@
                 </div>
             </section>
         </div>
-
+        
         <!-- Operation Guide Section -->
         <div id="guide-container" class="section-container">
             <section id="guide" class="section">
                 <h2>Operation Guide</h2>
                 <h3>Shift Instructions for Standardization:</h3>
-
                 <h4>For Maintenance Check:</h4>
                 <ol>
                     <li>Turn on the machine via the power supply. The OEE “Stop Duration” will start running as the machine automatically goes to “Stop” mode.</li>
@@ -105,17 +98,31 @@
                     <li>Switch back to “Manual” mode and test the functionality of all valves and mixers.</li>
                     <li>Return to the “Main Page,” navigate to “Ideal Page,” and input the relevant values.</li>
                 </ol>
-
                 <h4>For Stock Solution Testing:</h4>
                 <ol>
-                    <li>Go to the “Main Page” and select “Stock Tank.”</li>
-                    <li>On the “Quality Check (Stock Tank)” page, follow Step 1 by clicking on “Testing.”</li>
-                    <li>Proceed to Step 2 and click “Auto” to fill both the diluent and stock tanks.</li>
-                    <li>When the “Ready for Concentrate” indicator lights up in Step 3, add the concentrate.</li>
-                    <li>Click the “Concentrate Successfully Added” button. A portion of the stock solution will flow to the waste bin, where the conductivity sensor will test the solution.</li>
+                    <li>Return to “Main Page”, click on “Stock Tank”.</li>
+                    <li>In the “Quality Check (Stock Tank)” page, at “Step 1”, click on “Testing”.</li>
+                    <li>Then in “Step 2”, click on “Auto”. Both the diluent and stock tank will be filled.</li>
+                    <li>Afterwards, in “Step 3”, the “Ready for Concentrate” light will light up. Add in the concentrate.</li>
+                    <li>Click the button below “Concentrate Successfully Added”. A bit of the stock solution will flow to the waste bin where the conductivity sensor will detect the solution’s conductivity (+ concentration).</li>
+                    <li>In the “Quality Check (Stock Tank)” page, an indication will pop up displaying whether the stock solution concentration is high, low, or satisfactory. Fix the concentration accordingly if needed.</li>
+                    <li>After testing, in the “Quality Check (Stock Tank)” page, click on “Not Testing” at “Step 1”. The light indicator for “Not Testing” should be on all the time except when the stock solution is being tested.</li>
+                </ol>
+
+                <h4>For Normal Production:</h4>
+                <ol>
+                    <li>From the “Main Page”, click on “Settings”.</li>
+                    <li>When redirected to the “Settings” page, press on the “AUTO” button. Both the diluent and stock tank will be filled. <strong>(MUST RELOOK)</strong></li>
+                    <li><strong>Note:</strong> Stock and Diluent tank should not be filled as they were already filled when the stock solution was being tested.</li>
+                    <li>Return to the “Main Page”, click on “Concentration”. In the “Concentration” page, click the button below “Concentrate Successfully Added” and select the preferred concentration. The saline will then be produced accordingly.</li>
+                    <li><strong>Note:</strong> There should be no need to indicate that “Concentrate Successfully Added”.</li>
+                    <li>After the saline bottles are produced, from the “Main Page”, click on “OEE” to be redirected to the “OEE Page” then key in the number of bad bottles (Number of good bottles will automatically update after the number of bad bottles are keyed in).</li>
+                    <li>Click on the “Rejection Reasons” button to key in the number of bad bottles rejected to the specific category.</li>
                 </ol>
             </section>
         </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

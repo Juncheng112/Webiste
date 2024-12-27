@@ -6,6 +6,7 @@ body {
     padding: 0;
     color: #333;
     line-height: 1.6;
+    width: 85%;
 }
 
 h2, h3, h4 {
@@ -25,6 +26,7 @@ header {
 header h1 {
     font-size: 36px;
     margin: 0;
+    padding: left;
     letter-spacing: 1px;
 }
 
@@ -117,6 +119,9 @@ button:hover, .clear-button:hover {
 .clear-button {
     margin-left: 10px;
 }
+img{
+    width:1300px;
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -149,13 +154,19 @@ button:hover, .clear-button:hover {
 
 /* For smaller screens (480px and below) */
 @media (max-width: 480px) {
+    body{
+        width:100%
+    }
     /* Header */
     header {
         padding: 15px 20px;
+        width: 97%
     }
 
     header h1 {
         font-size: 24px;
+        padding-right: 6%;
+        text-align: center;
     }
 
     /* Sidebar */
@@ -208,5 +219,8 @@ button:hover, .clear-button:hover {
     /* Adjust spacing */
     .section-container {
         margin-bottom: 30px;
+    }
+    img{
+        width:300px;
     }
 }

@@ -6,7 +6,6 @@ body {
     padding: 0;
     color: #333;
     line-height: 1.6;
-    width: 85%;
 }
 
 h2, h3, h4 {
@@ -119,9 +118,6 @@ button:hover, .clear-button:hover {
 .clear-button {
     margin-left: 10px;
 }
-img{
-    width:1300px;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -154,9 +150,6 @@ img{
 
 /* For smaller screens (480px and below) */
 @media (max-width: 480px) {
-    body{
-        width:100%
-    }
     /* Header */
     header {
         padding: 15px 20px;
@@ -219,8 +212,5 @@ img{
     /* Adjust spacing */
     .section-container {
         margin-bottom: 30px;
-    }
-    img{
-        width:300px;
     }
 }

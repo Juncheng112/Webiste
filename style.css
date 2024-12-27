@@ -28,51 +28,6 @@ header h1 {
     letter-spacing: 1px;
 }
 
-/* Sidebar */
-.sidebar {
-    background-color: #333;
-    color: white;
-    width: 250px;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    overflow-y: auto;
-    transition: width 0.3s ease, background-color 0.3s ease;
-}
-
-.sidebar h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin: 10px 0;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease, padding-left 0.3s ease;
-}
-
-.sidebar ul li a:hover,
-.sidebar ul li a.active {
-    color: #0078d4;
-    padding-left: 10px;
-}
-
-.sidebar ul li a:focus {
-    outline: none;
-    color: #0078d4;
-}
 
 /* Search Bar */
 .search-bar {

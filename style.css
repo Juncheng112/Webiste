@@ -118,6 +118,25 @@ button:hover, .clear-button:hover {
 .clear-button {
     margin-left: 10px;
 }
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#navigate-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#navigate-button:hover {
+    background-color: #45a049;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {

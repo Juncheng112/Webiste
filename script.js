@@ -40,3 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchBar = document.querySelector(".search-bar");
     searchBar.appendChild(clearButton);
 });
+
+// Adding event listener to the button to navigate to another HTML page
+document.getElementById('navigate-button').addEventListener('click', function() {
+    window.location.href = '3d.html'; // Redirects to 3d.html when the button is clicked
+});

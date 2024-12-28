@@ -45,3 +45,4 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById('navigate-button').addEventListener('click', function() {
     window.location.href = '3d.html'; // Redirects to 3d.html when the button is clicked
 });
+

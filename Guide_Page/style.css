@@ -1,0 +1,292 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+h2, h3, h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(135deg, #0078d4, #005a9e); /* Gradient from #0078d4 to #005a9e */
+    color: rgb(255, 255, 255);
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: left;
+    letter-spacing: 1px;
+}
+
+/* Main Content */
+main.container {
+    margin-left: 270px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.section-container {
+    margin-bottom: 40px;
+}
+
+.section-container .section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+.section-container .section:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-container .section:focus {
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card:hover {
+    background-color: #e6f7ff;
+    transform: scale(1.02);
+}
+
+.card:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons and Links */
+button, .clear-button {
+    background-color: #0078d4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .clear-button:hover {
+    background-color: #005a9e;
+    transform: scale(1.05);
+}
+
+.clear-button {
+    margin-left: 10px;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+#menu-icon {
+    position: fixed;
+    top: 22.9px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    color: #ffffff; /* Matches your gradient theme */
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+#menu-icon:hover {
+    transform: scale(1.2); /* Adds a hover effect */
+    color: #005a9e; /* Darker shade on hover */
+}
+
+
+
+/* Sidebar styles */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden initially */
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(135deg, #004aad, #003580); /* Enhanced gradient */
+    color: white;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 999;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+}
+
+#sidebar ul li i {
+    margin-right: 15px; /* Spacing between icon and text */
+    font-size: 20px; /* Slightly larger icon */
+    color: #ffcc00; /* Icon color */
+    transition: transform 0.3s ease;
+}
+
+#sidebar ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(10px); /* Subtle movement */
+}
+
+#sidebar ul li:hover i {
+    transform: scale(1.2); /* Icon grows slightly */
+    color: #ffd700; /* Icon changes color */
+}
+
+/* Show Sidebar */
+#menu-icon.open + #sidebar {
+    left: 0;
+}
+
+/* Transitions for Hamburger Menu */
+#menu-icon.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-icon.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-icon.open .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        box-shadow: none;
+    }
+    main.container {
+        margin-left: 0;
+    }
+    .section-container {
+        padding: 15px;
+    }
+    .card {
+        padding: 10px;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+    #menu-icon {
+        left: 10px;
+    }
+    #sidebar {
+        width: 200px;
+    }
+    #sidebar ul li {
+        font-size: 16px;
+    }
+}
+
+
+
+/* For smaller screens (480px and below) */
+@media (max-width: 480px) {
+    /* Header */
+    header {
+        padding: 15px 20px;
+        width: 97%
+    }
+    header h1 {
+        font-size: 16px;
+        padding-right: 0;
+        text-align: center;
+    }
+    /* Sidebar */
+    .sidebar {
+        width: 100%;
+        position: relative;
+        padding: 15px;
+        box-shadow: none;
+    }
+    .sidebar ul li a {
+        font-size: 16px;
+    }
+    /* Main Content */
+    main.container {
+        margin-left: 0;
+        padding: 15px;
+    }
+    .section-container .section {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 8px;
+    }
+
+    /* Buttons */
+    button, .clear-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Adjust font size of body text */
+    body {
+        font-size: 14px;
+    }
+
+    /* Adjust spacing */
+    .section-container {
+        margin-bottom: 30px;
+    }
+    #menu-icon {
+        top: 15px;
+        left: 10px;
+    }
+    #sidebar {
+        width: 180px;
+    }
+
+    #sidebar ul li {
+        font-size: 14px;
+    }
+}

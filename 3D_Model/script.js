@@ -1,5 +1,5 @@
 document.getElementById('back-button').addEventListener('click', function() {
-    window.location.href = 'index.html'; // Redirects to 3d.html when the button is clicked
+    window.location.href = '../Main_Page/index.html'; // Redirects to 3d.html when the button is clicked
 });
 // Set up basic scene
 var scene = new THREE.Scene();

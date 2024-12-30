@@ -42,7 +42,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Adding event listener to the button to navigate to another HTML page
-document.getElementById('navigate-button').addEventListener('click', function() {
-    window.location.href = '3d.html'; // Redirects to 3d.html when the button is clicked
-});
+// document.getElementById('navigate-button').addEventListener('click', function() {
+//     window.location.href = '3d.html'; // Redirects to 3d.html when the button is clicked
+// });
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar.style.left === "-250px") {
+        sidebar.style.left = "0";
+    } else {
+        sidebar.style.left = "-250px";
+    }
+}
+
+function navigateTo(page) {
+    window.location.href = page;
+}
+
+
+
+
 

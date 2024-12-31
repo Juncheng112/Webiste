@@ -248,6 +248,10 @@ body {
 #sidebar-toggle:hover {
     background: #003580;
 }
+img{
+    width:100%;
+    height: 280px;
+}
 
 
 

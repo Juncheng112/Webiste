@@ -6,6 +6,7 @@ body {
     padding: 0;
     color: #333;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h2, h3, h4 {
@@ -15,27 +16,27 @@ h2, h3, h4 {
 
 /* Header Section */
 header {
-    background: linear-gradient(135deg, #0078d4, #005a9e); /* Gradient from #0078d4 to #005a9e */
+    background: linear-gradient(135deg, #0078d4, #005a9e); 
     color: rgb(255, 255, 255);
     padding: 20px 30px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 header h1 {
     font-size: 36px;
     margin: 0;
-    padding: left;
     letter-spacing: 1px;
+    animation: fadeIn 2s ease-in-out;
 }
-
 
 /* Search Bar */
 .search-bar {
     padding: 20px;
     margin-left: 200px;
     margin-top: 20px;
-    transition: margin-left 0.3s ease;
+    transition: margin-left 0.3s ease, opacity 0.3s ease;
 }
 
 #search-input {
@@ -45,18 +46,19 @@ header h1 {
     border: 2px solid #ccc;
     border-radius: 5px;
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #search-input:focus {
     border-color: #0078d4;
+    box-shadow: 0 0 10px rgba(0, 120, 212, 0.5); /* Glow effect on focus */
 }
 
 /* Main Content */
 main.container {
     margin-left: 270px;
     padding: 20px;
-    transition: margin-left 0.3s ease;
+    transition: margin-left 0.3s ease, padding 0.3s ease;
 }
 
 .section-container {
@@ -68,30 +70,33 @@ main.container {
     border-radius: 10px;
     padding: 18px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, padding 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .section-container .section:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* Slight floating effect */
 }
 
 .section-container .section:focus {
     outline: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Card Styles */
 .card {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     background-color: #e6f7ff;
     transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 120, 212, 0.2); /* Subtle blue glow on hover */
 }
 
 .card:focus {
@@ -107,22 +112,25 @@ button, .clear-button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 button:hover, .clear-button:hover {
     background-color: #005a9e;
     transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
 }
 
 .clear-button {
     margin-left: 10px;
 }
+
 .button-container {
     text-align: center;
     margin-top: 20px;
 }
 
+/* Navigate Button */
 #navigate-button {
     padding: 10px 20px;
     font-size: 16px;
@@ -131,50 +139,45 @@ button:hover, .clear-button:hover {
     border: none;
     cursor: pointer;
     border-radius: 5px; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #navigate-button:hover {
     background-color: #45a049;
+    transform: scale(1.05);
 }
 
 /* General styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-
 #menu-icon {
     position: fixed;
     top: 22.9px;
     left: 20px;
     cursor: pointer;
     z-index: 1000;
-    color: #ffffff; /* Matches your gradient theme */
+    color: #ffffff; 
     font-size: 24px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 #menu-icon:hover {
-    transform: scale(1.2); /* Adds a hover effect */
+    transform: scale(1.2); 
     color: #005a9e; /* Darker shade on hover */
+    text-shadow: 0 0 8px rgba(0, 120, 212, 0.7); /* Glow effect */
 }
-
-
 
 /* Sidebar styles */
 #sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Hidden initially */
+    left: -250px; 
     width: 250px;
     height: 100%;
-    background: linear-gradient(135deg, #004aad, #003580); /* Enhanced gradient */
+    background: linear-gradient(135deg, #004aad, #003580); 
     color: white;
     padding-top: 60px;
-    transition: left 0.3s ease;
+    transition: left 0.3s ease, box-shadow 0.3s ease;
     z-index: 999;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4); 
 }
 
 #sidebar ul {
@@ -190,25 +193,26 @@ body {
     cursor: pointer;
     font-size: 18px;
     letter-spacing: 0.5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
 #sidebar ul li i {
-    margin-right: 15px; /* Spacing between icon and text */
-    font-size: 20px; /* Slightly larger icon */
-    color: #ffcc00; /* Icon color */
-    transition: transform 0.3s ease;
+    margin-right: 15px; 
+    font-size: 20px; 
+    color: #ffcc00; 
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 #sidebar ul li:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    transform: translateX(10px); /* Subtle movement */
+    transform: translateX(10px); 
+    color: #ffd700; /* Change text color on hover */
 }
 
 #sidebar ul li:hover i {
-    transform: scale(1.2); /* Icon grows slightly */
-    color: #ffd700; /* Icon changes color */
+    transform: scale(1.2); 
+    color: #ffd700; 
 }
 
 /* Show Sidebar */
@@ -216,18 +220,6 @@ body {
     left: 0;
 }
 
-/* Transitions for Hamburger Menu */
-#menu-icon.open .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-#menu-icon.open .line:nth-child(2) {
-    opacity: 0;
-}
-
-#menu-icon.open .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
 /* Sidebar toggle button */
 #sidebar-toggle {
     position: fixed;
@@ -242,17 +234,24 @@ body {
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #sidebar-toggle:hover {
     background: #003580;
-}
-img{
-    width:100%;
+    transform: scale(1.05); /* Button grow effect */
 }
 
+/* Image Styling */
+img {
+    width: 100%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
 
+img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -281,9 +280,11 @@ img{
     header h1 {
         font-size: 28px;
     }
+
     #menu-icon {
         left: 10px;
     }
+
     #sidebar {
         width: 200px;
     }
@@ -293,19 +294,15 @@ img{
     }
 }
 
-
-
-/* For smaller screens (480px and below) */
 @media (max-width: 480px) {
     /* Header */
     header {
         padding: 15px 20px;
-        width: 97%
+        width: 97%;
     }
 
     header h1 {
         font-size: 16px;
-        padding-right: 0;
         text-align: center;
     }
 
@@ -314,7 +311,6 @@ img{
         width: 100%;
         position: relative;
         padding: 15px;
-        box-shadow: none;
     }
 
     .sidebar ul li a {
@@ -356,19 +352,28 @@ img{
         font-size: 14px;
     }
 
-    /* Adjust spacing */
-    .section-container {
-        margin-bottom: 30px;
-    }
     #menu-icon {
         top: 15px;
         left: 10px;
     }
+
     #sidebar {
         width: 180px;
     }
 
     #sidebar ul li {
         font-size: 14px;
+    }
+}
+
+/* Glow Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

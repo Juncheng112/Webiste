@@ -94,15 +94,19 @@ var pointLight = new THREE.PointLight(0xffffff, 0.8, 100);
 pointLight.position.set(5, 5, 5); // Position near the model for highlights
 scene.add(pointLight);
 
+// Variable to hold the 3D model
+var model;
+
 // Load 3D model (GLB format)
 var loader = new THREE.GLTFLoader();
 loader.load('result.gltf', function (gltf) {
-    var model = gltf.scene;
+    model = gltf.scene;
     scene.add(model);
 
     // Scale and position the model
     model.scale.set(1, 1, 1); // Adjust size if necessary
-    model.position.set(0, 0, 0); // Center the model
+    model.position.set(0, 0, 0); // Center the model at the origin
+    model.rotation.set(0, 0, 0); // Ensure the model starts upright
 
     // Ensure the model's material looks polished
     model.traverse(function (child) {
@@ -118,7 +122,7 @@ loader.load('result.gltf', function (gltf) {
 });
 
 // Position the camera for a better view
-camera.position.set(5, 5, 10); // Adjust position to focus on the model
+camera.position.set(-11.37 , -302.43, 126.96); // Adjust position to focus on the model
 camera.lookAt(0, 0, 0); // Ensure the camera looks at the model's center
 
 // Resize renderer on window resize
@@ -131,8 +135,15 @@ window.addEventListener('resize', function () {
 // Animation loop
 var animate = function () {
     requestAnimationFrame(animate);
+
+    // Rotate the model if loaded
+    if (model) {
+        model.rotation.z += 0.01; // Rotate around the Y-axis for spinning
+    }
+
     controls.update(); // Update OrbitControls
     renderer.render(scene, camera);
 };
+
 animate();
 

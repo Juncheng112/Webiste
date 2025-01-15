@@ -33,7 +33,7 @@ scene.add(pointLight);
 
 // Load 3D model (GLB format)
 var loader = new THREE.GLTFLoader();
-loader.load('Saline.gltf', function (gltf) {
+loader.load('result.gltf', function (gltf) {
     scene.add(gltf.scene);
     gltf.scene.scale.set(1, 1, 1); // Scale model
     gltf.scene.position.set(0, 0, 0); // Position model

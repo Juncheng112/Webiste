@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saline Solution Production Machine</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- Modern font -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div>
+            <h1>Saline Solution Production Machine</h1>
+            <!-- Hamburger Menu -->
+            <div id="menu-icon" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i> <!-- Modern menu icon -->
+            </div>
+            <div id="sidebar">
+                <ul>
+                    <li onclick="navigateTo('main.html')">
+                        <i class="fas fa-info-circle"></i> About Project
+                    </li>
+                    <li onclick="navigateTo('../Guide_Page/guide.html')">
+                        <i class="fas fa-book"></i> Guide
+                    </li>
+                    <li onclick="navigateTo('../3D_Model/3d.html')">
+                        <i class="fas fa-cube"></i> 3D Model
+                    </li>
+                </ul>
+            </div>
+            
+            
+            
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for sections or content...">
+    </div>
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <!-- Introduction Section -->
+        <div id="introduction-container" class="section-container">
+            <section id="introduction" class="section">
+                <h2>Introduction</h2>
+                <p>
+                    The Saline Machine, developed in 2023 under the guidance of Mr. Frederick, 
+                    a lecturer at Temasek Polytechnic's Advanced Manufacturing Centre, is a remarkable achievement. 
+                    This project successfully replicates an industrial saline production system with precision. 
+                    Equipped with advanced data analysis tools, it enables continuous performance monitoring and environmental impact assessment,
+                    ensuring maximum operational efficiency.
+                </p>
+                <!-- Adding the image here -->
+                <img src="Saline_image.png" alt="Saline Machine" >
+            </section>
+        </div>
+
+        <!-- Purpose Section -->
+        <div id="purpose-container" class="section-container">
+            <section id="purpose" class="section">
+                <h2>Purpose of this Project</h2>
+                <p>
+                    The saline production machine is a multi-disciplinary project that integrates electronics, mechatronics, 
+                    computer engineering, and biomedical engineering. Its purpose is to provide students with a comprehensive understanding of how a 
+                    manufacturing system operates on a production line. The system is designed to allow roles such as operations managers and sustainability officers 
+                    to track key performance indicators, including Overall Equipment Effectiveness (OEE) and sustainability metrics. 
+                    While the machine closely replicates a real-world production system, further improvements are necessary to fully align it with industrial standards
+                    and ensure it functions as an actual industry-grade system.
+                </p>
+            </section>
+        </div>
+
+        <!-- History Section -->
+        <div id="history-container" class="section-container">
+            <section id="history" class="section">
+                <h2>History of this Project</h2>
+                <p>Information coming soon.</p>
+            </section>
+        </div>
+
+        <!-- Content Section -->
+        <div id="content-container" class="section-container">
+            <section id="content" class="section">
+                <h2>Key Components of the Saline Machine</h2>
+                <div class="card">
+                    <h3>Water Purification System</h3>
+                    <p>Removes impurities and contaminants from the water source to ensure sterility.</p>
+                </div>
+                <div class="card">
+                    <h3>Salt Dissolving Unit</h3>
+                    <p>Precisely dissolves sodium chloride to create the desired concentration of saline solution.</p>
+                </div>
+                <div class="card">
+                    <h3>Filtration System</h3>
+                    <p>Removes any remaining particulate matter to ensure the solution's purity.</p>
+                </div>
+                <div class="card">
+                    <h3>Packaging System</h3>
+                    <p>Fills, seals, and labels the saline solution containers for safe and sterile storage.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+

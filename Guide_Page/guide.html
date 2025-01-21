@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saline Solution Production Machine</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- Modern font -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div>
+            <h1>Saline Solution Production Machine</h1>
+            <!-- Hamburger Menu -->
+            <div id="menu-icon" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i> <!-- Modern menu icon -->
+            </div>
+            <div id="sidebar">
+                <ul>
+                    <li onclick="navigateTo('guide.html')">
+                        <i class="fas fa-book"></i> Guide
+                    </li>
+                    <li onclick="navigateTo('../Main_Page/main.html')">
+                        <i class="fas fa-info-circle"></i> About Project
+                    </li>
+                    <li onclick="navigateTo('../3D_Model/3d.html')">
+                        <i class="fas fa-cube"></i> 3D Model
+                    </li>
+                </ul>
+            </div>
+
+    </header>
+    <!-- Operation Guide Section -->
+        <div id="guide-container" class="section-container">
+            <section id="guide" class="section">
+                <h2>Operation Guide</h2>
+                <h3>Shift Instructions for Standardization:</h3>
+                <h4>For Maintenance Check:</h4>
+                <ol>
+                    <li>Turn on the machine via the power supply. The OEE “Stop Duration” will start running as the machine automatically goes to “Stop” mode.</li>
+                    <li>Switch to “Manual” mode. Empty all the water in the pipes by opening all valves and using air pressure. The “Manual Duration” will start running.</li>
+                    <li>Empty all the water in the mixing bin, stock bin, and diluent bin by opening all relevant valves. Close the valves once emptied.</li>
+                    <li>Set the machine to “Stop” mode. Empty the waste bin and refill the water supply tank with clean water.</li>
+                    <li>Switch back to “Manual” mode and test the functionality of all valves and mixers.</li>
+                    <li>Return to the “Main Page,” navigate to “Ideal Page,” and input the relevant values.</li>
+                </ol>
+                <h4>For Stock Solution Testing:</h4>
+                <ol>
+                    <li>Return to “Main Page”, click on “Stock Tank”.</li>
+                    <li>In the “Quality Check (Stock Tank)” page, at “Step 1”, click on “Testing”.</li>
+                    <li>Then in “Step 2”, click on “Auto”. Both the diluent and stock tank will be filled.</li>
+                    <li>Afterwards, in “Step 3”, the “Ready for Concentrate” light will light up. Add in the concentrate.</li>
+                    <li>Click the button below “Concentrate Successfully Added”. A bit of the stock solution will flow to the waste bin where the conductivity sensor will detect the solution’s conductivity (+ concentration).</li>
+                    <li>In the “Quality Check (Stock Tank)” page, an indication will pop up displaying whether the stock solution concentration is high, low, or satisfactory. Fix the concentration accordingly if needed.</li>
+                    <li>After testing, in the “Quality Check (Stock Tank)” page, click on “Not Testing” at “Step 1”. The light indicator for “Not Testing” should be on all the time except when the stock solution is being tested.</li>
+                </ol>
+
+                <h4>For Normal Production:</h4>
+                <ol>
+                    <li>From the “Main Page”, click on “Settings”.</li>
+                    <li>When redirected to the “Settings” page, press on the “AUTO” button. Both the diluent and stock tank will be filled. <strong>(MUST RELOOK)</strong></li>
+                    <li><strong>Note:</strong> Stock and Diluent tank should not be filled as they were already filled when the stock solution was being tested.</li>
+                    <li>Return to the “Main Page”, click on “Concentration”. In the “Concentration” page, click the button below “Concentrate Successfully Added” and select the preferred concentration. The saline will then be produced accordingly.</li>
+                    <li><strong>Note:</strong> There should be no need to indicate that “Concentrate Successfully Added”.</li>
+                    <li>After the saline bottles are produced, from the “Main Page”, click on “OEE” to be redirected to the “OEE Page” then key in the number of bad bottles (Number of good bottles will automatically update after the number of bad bottles are keyed in).</li>
+                    <li>Click on the “Rejection Reasons” button to key in the number of bad bottles rejected to the specific category.</li>
+                </ol>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

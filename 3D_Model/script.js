@@ -15,22 +15,22 @@ controls.dampingFactor = 0.25;
 controls.screenSpacePanning = false;
 
 // Add Ambient and Directional Lighting with white tones
-var ambientLight = new THREE.AmbientLight(0xffffff, 1.2); // Bright white ambient light
+var ambientLight = new THREE.AmbientLight(0x525252, 2.1); // Bright white ambient light
 scene.add(ambientLight);
 
-var directionalLight = new THREE.DirectionalLight(0xffffff, 1.5); // Strong directional white light
-directionalLight.position.set(10, 15, 10); // Positioned above and slightly angled
+var directionalLight = new THREE.DirectionalLight(0xffffff, 2); // Strong directional white light
+directionalLight.position.set(20, 15, 20); // Positioned above and slightly angled
 directionalLight.castShadow = true; // Enable shadows for depth
 scene.add(directionalLight);
 
 // Add a white spotlight for dramatic effect
-var spotLight = new THREE.SpotLight(0xffffff, 1.2);
-spotLight.position.set(15, 20, 15); // Position above and to the side
+var spotLight = new THREE.SpotLight(0xffffff, 2);
+spotLight.position.set(25, 20, 25); // Position above and to the side
 spotLight.castShadow = true; // Enable shadows
 scene.add(spotLight);
 
 // Add a white point light for soft highlights
-var pointLight = new THREE.PointLight(0xffffff, 0.8, 100);
+var pointLight = new THREE.PointLight(0xffffff, 1.2, 100);
 pointLight.position.set(5, 5, 5); // Position near the model for highlights
 scene.add(pointLight);
 

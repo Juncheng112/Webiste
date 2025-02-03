@@ -78,7 +78,7 @@ var animate = function () {
 
     // Rotate the model if loaded
     if (model) {
-        model.rotation.z += 0.01; // Rotate around the Y-axis for spinning
+        model.rotation.z += 0.02; // Rotate around the Y-axis for spinning
     }
 
     controls.update(); // Update OrbitControls

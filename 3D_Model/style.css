@@ -52,3 +52,13 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.1);
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    width: 100%;
+    height: 100%;
+}
+canvas {
+    display: block; /* Remove extra spacing */
+}

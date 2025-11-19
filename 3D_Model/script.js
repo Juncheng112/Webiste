@@ -44,9 +44,9 @@ loader.load('result.gltf', function (gltf) {
     scene.add(model);
 
     // Scale and position the model
-    model.scale.set(1, 1, 1); 
-    model.position.set(0, 0, 0); // Lower the model
-    model.rotation.set(0, 0, 0); 
+    model.scale.set(1, 1, 1); // Adjust size if necessary
+    model.position.set(0, 0, 0); // Center the model at the origin
+    model.rotation.set(0, 0, 0); // Ensure the model starts upright
 
     // Ensure the model's material looks polished
     model.traverse(function (child) {
@@ -86,6 +86,3 @@ var animate = function () {
 };
 
 animate();
-
-
-

@@ -63,3 +63,9 @@ html, body {
 canvas {
     display: block; /* Remove extra spacing */
 }
+#DBDdivDashboard, #3DViewer {
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+}
+

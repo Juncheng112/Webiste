@@ -38,6 +38,7 @@ scene.add(pointLight);
 var model;
 
 // Load 3D model (GLB format)
+var loader = new THREE.GLTFLoader();
 loader.load('result.gltf', function (gltf) {
     model = gltf.scene;
     scene.add(model);
@@ -47,18 +48,18 @@ loader.load('result.gltf', function (gltf) {
     model.position.set(0, -1, 0); // Lower the model
     model.rotation.set(0, 0, 0); 
 
+    // Ensure the model's material looks polished
     model.traverse(function (child) {
         if (child.isMesh) {
-            child.material.metalness = 0.5;
-            child.material.roughness = 0.3;
-            child.material.emissive.set(0x000000);
-            child.material.needsUpdate = true;
+            child.material.metalness = 0.5; // Add moderate reflectivity
+            child.material.roughness = 0.3; // Smoothen the surface slightly
+            child.material.emissive.set(0x000000); // Disable glow effects
+            child.material.needsUpdate = true; // Apply changes to material
         }
     });
 }, undefined, function (error) {
     console.error(error);
 });
-
 
 // Position the camera for a better view
 camera.position.set(-11.37 , -302.43, 126.96); // Adjust position to focus on the model

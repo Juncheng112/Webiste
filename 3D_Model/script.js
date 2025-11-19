@@ -5,7 +5,7 @@ var renderer = new THREE.WebGLRenderer({ antialias: true }); // Enable antialias
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 // Set background color to a dark neutral tone
-renderer.setClearColor(0xffffff   , 1.3); // Background remains dark to emphasize the model
+renderer.setClearColor(0xffffff   , 2); // Background remains dark to emphasize the model
 document.body.appendChild(renderer.domElement);
 
 // Add Orbit Controls for better navigation

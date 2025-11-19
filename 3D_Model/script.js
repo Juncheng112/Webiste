@@ -5,7 +5,7 @@ var renderer = new THREE.WebGLRenderer({ antialias: true }); // Enable antialias
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 // Set background color to a dark neutral tone
-renderer.setClearColor(0x0C1115   , 1.3); // Background remains dark to emphasize the model
+renderer.setClearColor(0xffffff   , 1.3); // Background remains dark to emphasize the model
 document.body.appendChild(renderer.domElement);
 
 // Add Orbit Controls for better navigation
@@ -15,7 +15,7 @@ controls.dampingFactor = 0.25;
 controls.screenSpacePanning = false;
 
 // Add Ambient and Directional Lighting with white tones
-var ambientLight = new THREE.AmbientLight(0x525252, 2.1); // Bright white ambient light
+var ambientLight = new THREE.AmbientLight(0x434343, 2.1); // Bright white ambient light
 scene.add(ambientLight);
 
 var directionalLight = new THREE.DirectionalLight(0xffffff, 2); // Strong directional white light
@@ -45,7 +45,7 @@ loader.load('result.gltf', function (gltf) {
 
     // Scale and position the model
     model.scale.set(1, 1, 1); // Adjust size if necessary
-    model.position.set(0, 0, 0); // Center the model at the origin
+    model.position.set(0, -1, 0); // Center the model at the origin
     model.rotation.set(0, 0, 0); // Ensure the model starts upright
 
     // Ensure the model's material looks polished

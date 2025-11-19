@@ -45,7 +45,7 @@ loader.load('result.gltf', function (gltf) {
 
     // Scale and position the model
     model.scale.set(1, 1, 1); 
-    model.position.set(0, -1, 0); // Lower the model
+    model.position.set(0, 0, 0); // Lower the model
     model.rotation.set(0, 0, 0); 
 
     // Ensure the model's material looks polished

@@ -46,7 +46,9 @@ loader.load('result.gltf', function (gltf) {
     // Scale and position the model
     model.scale.set(1, 1, 1); // Adjust size if necessary
     model.position.set(0, 0, 0); // Center the model at the origin
-    model.rotation.set(0,0,0); // Ensure the model starts upright
+    // Many modeling tools export Z-up while three.js uses Y-up.
+    // Rotate the model -90 degrees around X to convert Z-up -> Y-up so it stands upright.
+    model.rotation.set(-Math.PI / 2, 0, 0);
 
     // Ensure the model's material looks polished
     model.traverse(function (child) {
@@ -60,11 +62,27 @@ loader.load('result.gltf', function (gltf) {
 }, undefined, function (error) {
     console.error(error);
 });
+// Position the camera for a better view: a bit closer and lower so it looks up at the model.
+// This places the camera nearer (Z), lowers it (Y) and makes the camera look slightly upward
+// at a point just above the model's origin so it reads as "looking up".
+camera.position.set(0, 80, 220);
+camera.rotation.set(0, 0, 0); // keep default rotation and rely on lookAt/controls
 
-// Position the camera for a better view
-camera.position.set(0.4237162688984951,-392.4691650703549, 147.523771100659 ); // Adjust position to focus on the model
-camera.lookAt(0, 0, 0); // Ensure the camera looks at the model's center
-camera.rotation.set(1.3713737966891695, 0.0005689362284197986, -0.002814990708179874);
+// Make the camera look slightly above the model's origin (so the view looks up at the model)
+var cameraTargetX = 0;
+var cameraTargetY = 130; // tune this if you want the look-up to be stronger/weaker
+var cameraTargetZ = -180; // tune this if you want the look-up to be stronger/weaker
+controls.target.set(cameraTargetX, cameraTargetY, cameraTargetZ);
+camera.lookAt(new THREE.Vector3(cameraTargetX, cameraTargetY, cameraTargetZ));
+controls.update();
+
+
+
+
+
+
+
+
 
 // Resize renderer on window resize
 window.addEventListener('resize', function () {
@@ -87,15 +105,14 @@ var animate = function () {
 
     // Rotate the model if loaded
     if (model) {
-        model.rotation.z += 0.02; // Rotate around the Z-axis for spinning
+        // Rotate around the Y-axis so the model spins upright (vertical axis)
+        model.rotation.z += 0.02;
     }
 
     controls.update(); // Update OrbitControls
     renderer.render(scene, camera);
 
-    // Optional: continuous logging (comment out if you use key press)
-    console.log("Camera Position:", camera.position);
-    console.log("Camera Rotation (Euler):", camera.rotation);
+    // (Removed continuous logging to avoid spamming the console)
 };
 
 animate();

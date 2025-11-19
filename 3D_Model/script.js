@@ -45,8 +45,8 @@ loader.load('result.gltf', function (gltf) {
 
     // Scale and position the model
     model.scale.set(1, 1, 1); // Adjust size if necessary
-    model.position.set(0, -1, 0); // Center the model at the origin
-    model.rotation.set(0, 0, 0); // Ensure the model starts upright
+    model.position.set(0, 0, 0); // Center the model at the origin
+    model.rotation.set(0,0,0); // Ensure the model starts upright
 
     // Ensure the model's material looks polished
     model.traverse(function (child) {
@@ -62,8 +62,9 @@ loader.load('result.gltf', function (gltf) {
 });
 
 // Position the camera for a better view
-camera.position.set(3.9872402392900117,-283.05307240658067,105.0567553983546); // Adjust position to focus on the model
+camera.position.set(0.4237162688984951,-392.4691650703549, 147.523771100659 ); // Adjust position to focus on the model
 camera.lookAt(0, 0, 0); // Ensure the camera looks at the model's center
+camera.rotation.set(1.3713737966891695, 0.0005689362284197986, -0.002814990708179874);
 
 // Resize renderer on window resize
 window.addEventListener('resize', function () {
@@ -93,8 +94,8 @@ var animate = function () {
     renderer.render(scene, camera);
 
     // Optional: continuous logging (comment out if you use key press)
-    //console.log("Camera Position:", camera.position);
-    //console.log("Camera Rotation (Euler):", camera.rotation);
+    console.log("Camera Position:", camera.position);
+    console.log("Camera Rotation (Euler):", camera.rotation);
 };
 
 animate();

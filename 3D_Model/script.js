@@ -62,7 +62,7 @@ loader.load('result.gltf', function (gltf) {
 });
 
 // Position the camera for a better view
-camera.position.set(-11.37 , -302.43, 126.96); // Adjust position to focus on the model
+camera.position.set(-11.37 , -290.43, 126.96); // Adjust position to focus on the model
 camera.lookAt(0, 0, 0); // Ensure the camera looks at the model's center
 
 // Resize renderer on window resize

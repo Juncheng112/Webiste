@@ -5,7 +5,7 @@ var renderer = new THREE.WebGLRenderer({ antialias: true }); // Enable antialias
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 // Set background color to a dark neutral tone
-renderer.setClearColor(0xffffff   , 2); // Background remains dark to emphasize the model
+renderer.setClearColor(0xffffff, 2); // Background remains dark to emphasize the model
 document.body.appendChild(renderer.domElement);
 
 // Add Orbit Controls for better navigation
@@ -62,7 +62,7 @@ loader.load('result.gltf', function (gltf) {
 });
 
 // Position the camera for a better view
-camera.position.set(0, 5, 10); // Adjust position to focus on the model
+camera.position.set(3.9872402392900117,-283.05307240658067,105.0567553983546); // Adjust position to focus on the model
 camera.lookAt(0, 0, 0); // Ensure the camera looks at the model's center
 
 // Resize renderer on window resize
@@ -72,17 +72,29 @@ window.addEventListener('resize', function () {
     camera.updateProjectionMatrix();
 });
 
+// Key listener to check camera info
+window.addEventListener('keydown', function(event) {
+    if(event.key === 'c') { // Press 'c' to check camera
+        console.log("Camera Position:", camera.position);
+        console.log("Camera Rotation (Euler):", camera.rotation);
+    }
+});
+
 // Animation loop
 var animate = function () {
     requestAnimationFrame(animate);
 
     // Rotate the model if loaded
     if (model) {
-        model.rotation.z += 0.02; // Rotate around the Y-axis for spinning
+        model.rotation.z += 0.02; // Rotate around the Z-axis for spinning
     }
 
     controls.update(); // Update OrbitControls
     renderer.render(scene, camera);
+
+    // Optional: continuous logging (comment out if you use key press)
+    //console.log("Camera Position:", camera.position);
+    //console.log("Camera Rotation (Euler):", camera.rotation);
 };
 
 animate();
